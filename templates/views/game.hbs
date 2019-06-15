@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+ 
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" href="./css/styles.css">
+          <link rel="shortcut icon" type="image/png" href="../../public/favicon/android-chrome-512x512.png">
+        <!-- <link rel="stylesheet" href="/styles/animation.css"> -->
+    </head>
+    <div class="title">
+            <div class="header">
+                    <p id="tt"><u> LETS QUIZ </u></p>
+            </div>
+    </div>
+
+
+    
+    
+    <div id="start">
+        <button id="sg" class="ui active button">
+            Start
+        </button>
+    </div>
+    
+
+    
+    <body>
+        <div id = "question">
+            <h1 id="ques"> </h1>
+            <div id = "options">
+                <ul class="a">
+                    <button id="answerA" class="but" onclick="answerA_clicked()"></button>
+                    <button id="answerB" class="but" onclick="answerB_clicked()"></button>
+                    <button id="answerC" class="but" onclick="answerC_clicked()"></button>
+                    <button id="answerD" class="but" onclick="answerD_clicked()"></button>
+                </ul>
+            </div>
+        </div>
+
+        <div id = "timer" class="progress progress-animated" style="height: 30px;">
+        </div>
+
+        <div id= "points">
+            Total Points: 0
+            <div id= "tp"></div>
+            <div id= "tq"></div>
+            <div id= "ta"></div>
+        </div>
+
+        <script src="/js/requests.js"></script>
+    </body>
+</html>

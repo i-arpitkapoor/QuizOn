@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <meta charset="utf-8">
+  <title>QuizOn</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/png" href="../../public/favicon/android-chrome-512x512.png">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../../public/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../../public/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../public/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="../../public/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="../../public/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../../public/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/css/login.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  </head>
+  <body>
+     <header id="header">
+    <div class="container-fluid">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="/" class="scrollto">QUIZZ</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="/">Home</a></li>
+          <li><a href="/leaderboard">LeaderBoard</a></li>
+          <li><a href="/quiz">QUIZ</a></li>
+          <li><a href="/log">GET IN</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/logout">LogOut!</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+    <div class="overlay">
+  <div class="success" id="message"> </div>
+  <div class="login">
+    <div id="tabs">
+      <ul class="tabs">
+        <li><a href="#login">Login</a></li>
+        <li><a href="#signup">Sign up</a></li>
+      </ul>
+      <div id="login">
+        <form id="loginForm" action="/login" method="POST">
+          <input type="text" placeholder="Username" name="username" required />
+          <input type="password" placeholder="Password" name="password" required />
+          <input type="submit" value="Login" class="button" />
+        </form>
+      </div>
+      <div id="signup">
+        <form id="signupForm" action="/register" method="POST">
+          <input type="text" name="username" placeholder="username">
+          <input type="text" placeholder="email" name="email">
+          <input type="password" placeholder="Password" name="password">
+          {{!-- <input type="password" placeholder="Confirm Password" name="Confirm"> --}}
+          <input type="submit" value="Sign up" class="button">
+          {{!-- <button>SUBMIT</button> --}}
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="contact">&copy; 2016 Company </a>
+</div>
+<script src="../../public/lib/jquery/jquery.min.js"></script>
+  <script src="../../public/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="../../public/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../public/lib/easing/easing.min.js"></script>
+  <script src="../../public/lib/superfish/hoverIntent.js"></script>
+  <script src="../../public/lib/superfish/superfish.min.js"></script>
+  <script src="../../public/lib/wow/wow.min.js"></script>
+  <script src="../../public/lib/waypoints/waypoints.min.js"></script>
+  <script src="../../public/lib/counterup/counterup.min.js"></script>
+  <script src="../../public/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../../public/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="../../public/lib/lightbox/js/lightbox.min.js"></script>
+  <script src="../../public/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../../public/js/login.js"></script>
+  </body>
+</html>
+
+

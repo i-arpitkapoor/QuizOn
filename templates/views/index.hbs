@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>QUIZ</title>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/styles.min.css">
+          <link rel="shortcut icon" type="image/png" href="../../public/favicon/android-chrome-512x512.png">
+          {{>header}}
+        <!-- <link rel="stylesheet" href="/styles/ind.css"> -->
+    </head>
+    <body>
+        <div class="centered-form">
+            <div style="width:25%;"  class="centered-form__box">
+                <h1> Join</h1>
+                <form action="/game">
+                    <label>Display Name</label>
+                    <input type="text" name="username" placeholder="Display Name" required>
+
+                    <label>Email Address</label>
+                    <input type="text" name="email" placeholder="Email" required>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Category</label>
+                        <select name="category" class="form-control" id="exampleFormControlSelect1">
+                          <option value ="9">General Knowledge</option>
+                          <option value ="18">Computer Science</option>
+                          <option value="24">Politics</option>
+                          <option value="22">Geography</option>
+                          <option value="21">Sports</option>
+                          <option value="11">Movies</option>
+                          <option value="12">Music</option>
+                          <option value="14">TV</option>
+                          <option value="19">Mathematics</option>
+                          <option value="26">Celebrities</option>
+                          <option value="29">Comics</option>
+                          <option value="30">Gadgets</option>
+
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect2">Difficulty</label>
+                        <select name="difficulty" multiple class="form-control" id="exampleFormControlSelect2">
+                          <option value="easy">Easy</option>
+                          <option value="medium">Medium</option>
+                          <option value="hard">Hard</option>
+                        </select>
+                      </div>
+
+
+                    <button>Start</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

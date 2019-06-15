@@ -1,0 +1,14 @@
+body
+{
+    background-image: url(../images/404.png);
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+img {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+  }

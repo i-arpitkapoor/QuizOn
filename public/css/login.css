@@ -1,0 +1,146 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
+body {
+  background: url(https://unsplash.imgix.net/photo-1423683249427-8ca22bd873e0?fit=crop&fm=jpg&h=700&q=75&w=1050) center top no-repeat;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+}
+
+.overlay {
+  background: rgba(52, 69, 87, 0.5);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  transition: all .2s ease;
+  overflow: hidden;
+}
+
+.success {
+  display: none;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 55px;
+}
+
+.login {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #34495e;
+  display: block;
+  width: 280px;
+  box-shadow: 0 0 45px 5px rgba(0, 0, 0, .35);
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+.login input {
+  display: block;
+  width: 255px;
+  margin-bottom: 15px;
+  background: #2c3e50;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 10px;
+  margin: 15px;
+  transition: all .2s ease;
+}
+
+.login input:hover {
+  opacity: 0.5;
+}
+
+.login input:focus {
+  background: #eee;
+  opacity: 0.5;
+  color: #000;
+}
+
+.login .button {
+  width: 254px !important;
+  background: #517191 !important;
+}
+
+#tabs {
+  margin: -6px -6px;
+}
+
+ul.tabs li a {
+  color: #fff;
+  font-size: 20px;
+  padding: 15px;
+  outline: none;
+}
+
+.ui-tabs-active > a {
+  text-decoration: underline;
+  font-size: 10px;
+  background: #34495e !important;
+}
+
+.ui-state-default > a {
+  text-decoration: underline;
+  font-size: 10px;
+  background: #2c3e50;
+  width: 140px;
+  text-align: center;
+}
+
+.ui-tabs {
+  position: relative;
+  padding: .2em;
+  margin-bottom: 15px;
+}
+
+.ui-tabs .ui-tabs-nav {
+  margin: 0;
+  padding: .2em .2em 0;
+}
+
+.ui-tabs .ui-tabs-nav li {
+  list-style: none;
+  float: left;
+  position: relative;
+  top: 0;
+  margin: 0;
+  border-bottom-width: 0;
+  padding: 0;
+  white-space: nowrap;
+  margin-bottom: 15px;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+  float: left;
+  padding: .5em 1em;
+  margin: 0;
+  text-decoration: none;
+}
+
+.overlay-success {
+  background: rgba(52,73,94, .97) !important;
+  transition: all 1s ease;
+}
+
+.overlay-fail {
+  background: rgba(231, 76, 60,.85) !important;
+  transition: all 1s ease;
+}
+
+.contact {
+  color: rgba(255,255,255,.6);
+  position:fixed;
+  font-size: 16px;
+  bottom: 10px;
+  right: 10px;
+}
+.contact:hover {
+  text-decoration:none;
+  color: rgba(255,255,255,.6);
+}
