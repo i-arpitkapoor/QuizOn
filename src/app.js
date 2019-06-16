@@ -239,7 +239,7 @@ app.post ('/answers', async function(req, res){
             console.log(result.ops)  //result ops gives array of all docs inserted
         })
     
-    // sendEmail(req.user.email, req.user.username, req.body.questions)
+    sendEmail(req.user.email, req.user.username, req.body.questions)
 });
 
 app.get('/home', (req, res) => {
