@@ -13,6 +13,12 @@ const LocalStrategy = require("passport-local")
 const passportLocalMongoose = require("passport-local-mongoose")
 const User = require('../models/user')
 
+// hbs.registerHelper('ifCond', function(v1, v2, options) {
+//     if(!v1) {
+//       return options.fn(this);
+//     }
+//     return options.inverse(this);
+//   });
 
 
 const connectionURL = process.env.MONGODB_URL
@@ -85,7 +91,14 @@ const getArrayFromDB = async () => {
 
 
 app.get('', (req, res) => {
-    res.render('home')
+    let user
+    if(req.user)
+        user = req.user.username
+    else user = 'LOGOUT!!'
+    console.log(req.user)
+    res.render('home', {
+        user:user
+    })
 })
 
 
@@ -104,7 +117,10 @@ app.get('/game', isLoggedIn, (req, res) => {
 // AUTH ROUTES
 
 app.get('/log', isLoggedOut, function (req, res){
-    res.render('login')
+    let user = req.body.username
+    res.render('login', {
+        user: user
+    })
 })
 
 app.post('/register', function(req, res){
