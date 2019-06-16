@@ -27,7 +27,7 @@ var name = urll.searchParams.get("username")
 console.log(difficulty)
 console.log(category);
 var points = 0
-var sec = 10
+var sec = 20
 var correct_ans
 var game_state = 0
 let data

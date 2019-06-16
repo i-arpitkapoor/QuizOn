@@ -90,13 +90,12 @@ app.get('', (req, res) => {
 
 
 app.get('/game', isLoggedIn, (req, res) => {
-    if(req.query.email ==  undefined){
-        console.log('Fill the form MAN')
-        res.render('error')
-    } else{
-        console.log(req.query)
+    // if(req.query.email ==  undefined){
+    //     console.log('Fill the form MAN')
+    //     res.render('error')
+/*} else*/
+    console.log(req.query)
     res.render('game')
-    }
     
 })
 
@@ -111,7 +110,7 @@ app.get('/log', isLoggedOut, function (req, res){
 app.post('/register', function(req, res){
     req.body.username;
     req.body.password;
-    User.register(new User({username: req.body.username}), req.body.password, function(err, user){
+    User.register(new User({username: req.body.username, email: req.body.email}), req.body.password, function(err, user){
         if(err){
             console.log(err)
             return res.render('register');
@@ -191,9 +190,10 @@ app.get('/leaderboard', async (req, res) => {
 
 
 app.post ('/answers', async function(req, res){
+    console.log(req.user)
     console.log(req.body.name, req.body.email, req.body.questions)
     let user = {
-        name: req.body.name,
+        name: req.user.username,
         score: req.body.score
     }
 
@@ -212,7 +212,9 @@ app.post ('/answers', async function(req, res){
 
     // INSERTING THE CURRENT PLAYER TO DB TO DATABASE
     await db.collection('scorecard').insertOne({
-            name: req.body.name,
+            // name: req.body.name,
+            name: req.user.username,
+            email: req.user.email,
             score: req.body.score
         }, (error, result) => {    // a callback called after insertion
             if(error) {
@@ -221,7 +223,7 @@ app.post ('/answers', async function(req, res){
             console.log(result.ops)  //result ops gives array of all docs inserted
         })
     
-    // sendEmail(req.body.email, req.body.name, req.body.questions)
+    // sendEmail(req.user.email, req.user.username, req.body.questions)
 });
 
 app.get('/home', (req, res) => {
